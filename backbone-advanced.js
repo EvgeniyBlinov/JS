@@ -1,6 +1,6 @@
 /**
  * Advanced functions for backbone.js.
- * Copyright (c) 2014 Evgeniy Blinov (http://blinov.in.ua/)
+ * Copyright (c) 2014 Evgeniy Blinov (https://evgeniyblinov.ru)
  * 
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
