@@ -29,10 +29,22 @@
         String.prototype.fulltrim=function(){return this.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,'').replace(/\s+/g,' ');};
     }
 
+    if (!String.prototype.toDOM) {
+        String.prototype.toDOM = function(){
+            var d = document,
+                i,
+                a = d.createElement("div"),
+                b = d.createDocumentFragment();
+            a.innerHTML = this;
+            while ( i = a.firstChild ) b.appendChild(i);
+            return b;
+        };
+    }
+
     this.getType = function( object ) {
         return Object.prototype.toString.call( object ).slice(8, -1);
     };
-    
+
     this.randomString = function (len, charSet) {
         charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var randomString = '';
